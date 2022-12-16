@@ -15,7 +15,7 @@ struct ContentView: View {
     var body: some View {
         Form {
             HStack {
-                Text("CPUs: ").bold()
+                Text("CPUs:").bold()
                 Text("\(Int(cpus))")
             }
             Slider(
@@ -25,7 +25,7 @@ struct ContentView: View {
             )
             
             HStack {
-                Text("Memory: ").bold()
+                Text("Memory:").bold()
                 Text("\(Int(memory)) GB")
             }
             Slider(
