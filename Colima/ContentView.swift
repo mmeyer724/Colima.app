@@ -9,8 +9,8 @@ import SwiftUI
 import LaunchAtLogin
 
 struct ContentView: View {
-    @State private var cpus = 2.0
-    @State private var memory = 4.0
+    @AppStorage("cpus") private var cpus = 2.0
+    @AppStorage("memory") private var memory = 4.0
     
     var body: some View {
         Form {
@@ -37,11 +37,8 @@ struct ContentView: View {
             HStack {
                 LaunchAtLogin.Toggle()
                 Spacer()
-                Button("Restart Colima") {
-                    
-                }
+                Button("Restart Colima") {}
             }
-            
         }.padding()
     }
 }

@@ -10,17 +10,13 @@ import LaunchAtLogin
 
 @main
 struct ColimaApp: App {
-    @State private var speed = 50.0
-    
     var body: some Scene {
         Settings {
             ContentView()
         }
         MenuBarExtra("Colima.app", systemImage: "1.circle") {
             Text("Colima is running")
-            Button("Stop") {
-                
-            }
+            Button("Stop") {}
             Divider()
             Button("Settings") {
                 showSettingsWindow()
@@ -28,7 +24,6 @@ struct ColimaApp: App {
             Button("Quit") {
                 NSApplication.shared.terminate(nil)
             }.keyboardShortcut("q")
-
         }
     }
     
