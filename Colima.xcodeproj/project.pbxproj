@@ -11,6 +11,7 @@
 		F36E7289294D1AFF009475EA /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F36E7288294D1AFF009475EA /* ContentView.swift */; };
 		F36E728B294D1AFF009475EA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F36E728A294D1AFF009475EA /* Assets.xcassets */; };
 		F36E728E294D1AFF009475EA /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F36E728D294D1AFF009475EA /* Preview Assets.xcassets */; };
+		F36E7297294D1E89009475EA /* LaunchAtLogin in Frameworks */ = {isa = PBXBuildFile; productRef = F36E7296294D1E89009475EA /* LaunchAtLogin */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -20,6 +21,7 @@
 		F36E728A294D1AFF009475EA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F36E728D294D1AFF009475EA /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		F36E728F294D1AFF009475EA /* Colima.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Colima.entitlements; sourceTree = "<group>"; };
+		F36E729A294D22A1009475EA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -27,6 +29,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F36E7297294D1E89009475EA /* LaunchAtLogin in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -52,6 +55,7 @@
 		F36E7285294D1AFF009475EA /* Colima */ = {
 			isa = PBXGroup;
 			children = (
+				F36E729A294D22A1009475EA /* Info.plist */,
 				F36E7286294D1AFF009475EA /* ColimaApp.swift */,
 				F36E7288294D1AFF009475EA /* ContentView.swift */,
 				F36E728A294D1AFF009475EA /* Assets.xcassets */,
@@ -85,6 +89,9 @@
 			dependencies = (
 			);
 			name = Colima;
+			packageProductDependencies = (
+				F36E7296294D1E89009475EA /* LaunchAtLogin */,
+			);
 			productName = Colima;
 			productReference = F36E7283294D1AFF009475EA /* Colima.app */;
 			productType = "com.apple.product-type.application";
@@ -113,6 +120,9 @@
 				Base,
 			);
 			mainGroup = F36E727A294D1AFF009475EA;
+			packageReferences = (
+				F36E7295294D1E89009475EA /* XCRemoteSwiftPackageReference "LaunchAtLogin-Modern" */,
+			);
 			productRefGroup = F36E7284294D1AFF009475EA /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -274,6 +284,7 @@
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Colima/Info.plist;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -301,6 +312,7 @@
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Colima/Info.plist;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -336,6 +348,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		F36E7295294D1E89009475EA /* XCRemoteSwiftPackageReference "LaunchAtLogin-Modern" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/sindresorhus/LaunchAtLogin-Modern";
+			requirement = {
+				branch = main;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		F36E7296294D1E89009475EA /* LaunchAtLogin */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = F36E7295294D1E89009475EA /* XCRemoteSwiftPackageReference "LaunchAtLogin-Modern" */;
+			productName = LaunchAtLogin;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = F36E727B294D1AFF009475EA /* Project object */;
 }

@@ -6,16 +6,43 @@
 //
 
 import SwiftUI
+import LaunchAtLogin
 
 struct ContentView: View {
+    @State private var cpus = 2.0
+    @State private var memory = 4.0
+    
     var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundColor(.accentColor)
-            Text("Hello, world!")
-        }
-        .padding()
+        Form {
+            HStack {
+                Text("CPUs: ").bold()
+                Text("\(Int(cpus))")
+            }
+            Slider(
+                value: $cpus,
+                in: 1...Double(ProcessInfo.processInfo.processorCount),
+                step: 1
+            )
+            
+            HStack {
+                Text("Memory: ").bold()
+                Text("\(Int(memory)) GB")
+            }
+            Slider(
+                value: $memory,
+                in: 1...Double(ProcessInfo.processInfo.physicalMemory / 1073741824),
+                step: 1
+            )
+            
+            HStack {
+                LaunchAtLogin.Toggle()
+                Spacer()
+                Button("Restart Colima") {
+                    
+                }
+            }
+            
+        }.padding()
     }
 }
 
