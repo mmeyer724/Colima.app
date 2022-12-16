@@ -16,7 +16,7 @@ struct ColimaApp: App {
         Settings {
             ContentView()
         }
-        MenuBarExtra("Colima", systemImage: "1.circle") {
+        MenuBarExtra("Colima.app", systemImage: "1.circle") {
             Text("Colima is running")
             Button("Stop") {
                 
